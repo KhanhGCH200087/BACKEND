@@ -58,7 +58,9 @@ mongoose.connect(database)
     .then(() => console.log('connect to db sucess'))
     .catch((err) => console.log('connect to db fail' + err));
 
-// const PORT = process.env.PORT || 5000
+const PORT = process.env.PORT || 8000
+app.listen(PORT, () => console.log(`Server started on port ${PORT}`))
+// const PORT = 4000;
 // app.listen(PORT, () => console.log(`Server started on port ${PORT}`))
 
 //-------------------------------------------------------------------
@@ -161,7 +163,6 @@ hbs.registerHelper('formatDate', function (date) {
     return date.toISOString().split('T')[0]; // Format date as YYYY-MM-DD
 });
 
-// const PORT = 4000;
-// app.listen(PORT, () => console.log(`Server started on port ${PORT}`))
+
 
 module.exports = app;
